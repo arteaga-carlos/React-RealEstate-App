@@ -1,0 +1,266 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React Local</title>
+  <!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+<!-- Import the React, React-Dom and Babel libraries from unpkg -->
+  <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+  <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+  <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<body>
+
+	<div id="root"></div>
+
+	<script type="text/babel">
+
+		const  rootElement = document.getElementById('root');
+		
+		class App extends React.Component {
+		
+			constructor(props){
+				super(props);
+				
+				this.state = {
+					questions: [
+{id: 0, question: 'Creative Finance Purchase OR Conventional Purchase?', option1: 4, option2: 3 },
+{id: 1, question: 'CONVENTIONAL: Cash/Hard Money Purchase', option1: null, option2: null },
+{id: 2, question: 'Creative Finance Purchase', option1: null, option2: null },
+{id: 3, question: 'Down payment required?', option1: 7, option2: 8 },
+{id: 4, question: 'Is your PRIMARY goal LONG TERM CASH or UPFRONT FEE?', option1: 8, option2: 7 },
+{id: 5, question: 'Yes, can you cover the down payment?', option1: 9, option2: 10 },
+{id: 6, question: 'No, is your strategy to build passive income?', option1: 12, option2: 26 },
+{id: 7, question: 'LONG TERM CASH, can you personally fund the Entry Fee?', option1: 47, option2: 48 },
+{id: 8, question: 'Upfront Fee, Does the property Cash Flow?', option1: 116, option2: 49 },
+{id: 9, question: 'Yes, is your goal to make fast $ or passive income?', option1: 11, option2: 13 },
+{id: 10, question: 'WHOLESALE', option1: null, option2: null },
+{id: 11, question: 'Fast cash, can you afford the rehab to flip the property?', option1: 10, option2: 13 },
+{id: 12, question: 'Passive Income, could you qualify for a bank loan?', option1: 17, option2: 18 },
+{id: 13, question: 'yes, will you make more $$ flipping than wholesaling?', option1: 15, option2: 10 },
+{id: 14, question: 'no, WHOLESALE', option1: null, option2: null },
+{id: 15, question: 'FIX N FLIP', option1: null, option2: null },
+{id: 16, question: 'no, WHOLESALE', option1: null, option2: null },
+{id: 17, question: 'is the property in a desirable business or tourism area?', option1: 23, option2: 122 },
+{id: 18, question: 'do you have private funding for the purchase?', option1: null, option2: null },
+{id: 19, question: 'Yes, AIRBNB', option1: null, option2: null },
+{id: 20, question: 'is it possible to obtain zoning for group homes', option1: 65, option2: 66 },
+{id: 21, question: 'no, WHOLESALE', option1: null, option2: null },
+{id: 22, question: 'yes, is the property in a desirable business or tourism area?', option1: 19, option2: 122 },
+{id: 23, question: 'yes, AIRBNB', option1: null, option2: null },
+{id: 24, question: 'no, TRADITIONAL RENTAL', option1: null, option2: null },
+{id: 25, question: 'yes, could you qualify for a bank loan?', option1: null, option2: null },
+{id: 26, question: 'no, can you afford to rehab and flip the property?', option1: 21, option2: 27 },
+{id: 27, question: 'yes, will you make more money flipping than wholesaling?', option1: 10, option2: 15 },
+{id: 28, question: 'no, WHOLESALE', option1: null, option2: null },
+{id: 29, question: 'yes, FIX N FLIP', option1: null, option2: null },
+{id: 30, question: 'no, WHOLESALE', option1: null, option2: null },
+{id: 31, question: 'yes, is the property in a desirable business or tourism area?', option1: null, option2: null },
+{id: 32, question: 'yes, AIRBNB', option1: null, option2: null },
+{id: 33, question: 'no, do you have private funding for the purchase?', option1: 34, option2: 35 },
+{id: 34, question: 'no, would you cashflow $350 over your hard money monthly payment?', option1: null, option2: null },
+{id: 35, question: 'yes, is the property located in a business or tourism area?', option1: 32, option2: 37 },
+{id: 36, question: 'yes, AIRBNB', option1: null, option2: null },
+{id: 37, question: 'no, TRADITIONAL RENTAL', option1: null, option2: null },
+{id: 38, question: 'yes, is your hard money loan long term (duration longer than 1 year)?', option1: null, option2: null },
+{id: 39, question: 'yes, is the property in a desirable business or tourism area?', option1: null, option2: null },
+{id: 40, question: 'no, could you qualify for a bank loan before your hard money loan expired?', option1: null, option2: null },
+{id: 41, question: 'yes, is the property in a desirable business or tourism area?', option1: null, option2: null },
+{id: 42, question: 'no, WHOLESALE', option1: null, option2: null },
+{id: 43, question: 'yes, AIRBNB', option1: null, option2: null },
+{id: 44, question: 'no, TRADITIONAL RENTAL', option1: null, option2: null },
+{id: 45, question: 'yes, AIRBNB', option1: null, option2: null },
+{id: 46, question: 'no, TRADITIONAL RENTAL', option1: null, option2: null },
+{id: 47, question: 'yes, does it still cashflow after raising money?', option1: 51, option2: 62 },
+{id: 48, question: 'no, can you find private money? Or can the buyers bring your entry fee?', option1: 47, option2: 71 },
+{id: 49, question: 'No, Does the property have Equity?', option1: 50, option2: 53 },
+{id: 50, question: 'No, Wholesale to a Cash Buyer or a Homestead Buyer for a fee.', option1: null, option2: null },
+{id: 51, question: 'No, does it have equity?', option1: 53, option2: 54 },
+{id: 52, question: 'Yes, do you want to control the property (landlord)?', option1: 55, option2: 56 },
+{id: 53, question: 'Yes, is it a tight spread?', option1: 81, option2: 82 },
+{id: 54, question: 'No, can it cashflow with a different model?', option1: 80, option2: 55 },
+{id: 55, question: 'Yes, is the property zoned for group home?', option1: 57, option2: 58 },
+{id: 56, question: 'No, Is your Sales Price over $100,000 or is your buyer bringing more than 10% deposit?', option1: 75, option2: 76 },
+{id: 57, question: 'Yes, Do you want to build a Group Home Business?', option1: 85, option2: 129 },
+{id: 58, question: 'No, is the property located in a business or tourism area?', option1: 59, option2: 60 },
+{id: 59, question: 'Yes, Do you want to own/operate an AIRBNB business?', option1: 92, option2: 91 },
+{id: 60, question: 'No, do you want to manage rentals? Yes, are you sure you want to manage tenants and collect basic rent?', option1: 93, option2: 61 },
+{id: 61, question: 'No, Are you ok with someone buying this property in 3- 7 Years?', option1: 77, option2: 78 },
+{id: 62, question: 'Yes, do you want to deploy capital into this deal long term?', option1: null, option2: null },
+{id: 63, question: 'No, Wholesale it.', option1: null, option2: null },
+{id: 64, question: 'No', option1: null, option2: null },
+{id: 65, question: 'No, is it an area you would like to own property long term?', option1: 10, option2: 68 },
+{id: 66, question: 'do you want to operate a Group Home Business?', option1: 113, option2: 83 },
+{id: 67, question: 'No, wholesale it.', option1: null, option2: null },
+{id: 68, question: 'Yes, does it need a large renovation', option1: 69, option2: 70 },
+{id: 69, question: 'No, traditional rental.', option1: null, option2: null },
+{id: 70, question: 'Yes, BRRRR Strategy', option1: null, option2: null },
+{id: 71, question: 'Is the Entry Fee More than $7,500? Yes, can you find a Homestead Buyer to cover your Entry Fee?', option1: 72, option2: 71 },
+{id: 72, question: 'No, Do you want to personally own this property and manage it?', option1: 73, option2: 74 },
+{id: 73, question: 'No, I want to be the lender and hold the note. No management.', option1: null, option2: null },
+{id: 74, question: 'Yes, Are you ok with someone buying this property in 3- 7 Years and you lose ownership?', option1: 77, option2: 78 },
+{id: 75, question: 'No, Agreement for Sale, keep the deed. Collect down payment. Be the bank.', option1: null, option2: null },
+{id: 76, question: 'Yes, Wrap to Homestead Buyer, Collect down payment, be the bank.', option1: null, option2: null },
+{id: 77, question: 'No, I want to keep it forever. SRRR (rental)', option1: null, option2: null },
+{id: 78, question: 'Yes, Lease Option, run the risk of POTENTIALLY having someone buy the home from', option1: null, option2: null },
+{id: 79, question: 'you.', option1: null, option2: null },
+{id: 80, question: 'No, Is there room to negotiate?', option1: 86, option2: 87 },
+{id: 81, question: 'No, plenty of equity, Do you want to run a construction project?', option1: 90, option2: 89 },
+{id: 82, question: 'Yes, lower equity, do you want to run a construction Project?', option1: 119, option2: 120 },
+{id: 83, question: 'Wholesale or Partner with a Group Home Business', option1: null, option2: null },
+{id: 84, question: 'Yes, are you sure? Yes, Are you dead serious? Yes, Build a Group Home Business.', option1: null, option2: null },
+{id: 85, question: 'No, Wholesale or Partner with a Group Home Business', option1: null, option2: null },
+{id: 86, question: 'No, Short Sale', option1: null, option2: null },
+{id: 87, question: 'Yes, can you do a loan modification?', option1: 94, option2: 95 },
+{id: 88, question: 'Yes, are you sure?', option1: null, option2: null },
+{id: 89, question: 'No, Wholesale to a Fix and Flipper with terms in place, and possible JV partnership.', option1: null, option2: null },
+{id: 90, question: 'Yes, For real? Yes, Sub- Tail.', option1: null, option2: null },
+{id: 91, question: 'No, Wholesale to an AIRBNB Investor.', option1: null, option2: null },
+{id: 92, question: 'Yes, Buy as an AIRBNB.', option1: null, option2: null },
+{id: 93, question: 'Yes, SRRR (rental)', option1: null, option2: null },
+{id: 94, question: 'No, Can you renegotiate with the seller?', option1: 111, option2: 112 },
+{id: 95, question: 'Yes, help the seller with a loan modification.', option1: 104, option2: 108 },
+{id: 96, question: 'No, I want to keep it forever. SRRR (rental)', option1: null, option2: null },
+{id: 97, question: 'Yes, Lease Option, run the risk of POTENTIALLY having someone buy the home from', option1: null, option2: null },
+{id: 98, question: 'you.', option1: null, option2: null },
+{id: 99, question: 'No, can you renegotiate your deal?', option1: null, option2: null },
+{id: 100, question: 'No, Wholesale it.', option1: null, option2: null },
+{id: 101, question: 'Yes, Is your Sales Price over $100,000 or is your buyer bringing more than 10% deposit.', option1: 75, option2: 76 },
+{id: 102, question: 'No, Agreement for Sale, keep the deed. Collect down payment. Be the bank.', option1: null, option2: null },
+{id: 103, question: 'Yes, Wrap to Homestead Buyer, Collect down payment, be the bank.', option1: null, option2: null },
+{id: 104, question: 'Successful? Restart from here', option1: null, option2: null },
+{id: 105, question: 'No, Do you have someone to partner with?', option1: 107, option2: 10 },
+{id: 106, question: 'No, Wholesale it.', option1: null, option2: null },
+{id: 107, question: 'Yes, Partner with a cash buyer and own the property together.', option1: null, option2: null },
+{id: 108, question: 'Unsuccessful?', option1: 109, option2: 110 },
+{id: 109, question: 'Short Sale', option1: null, option2: null },
+{id: 110, question: 'Buy at Auction', option1: null, option2: null },
+{id: 111, question: 'No, Wholesale to Homestead Buyer for a fee.', option1: null, option2: null },
+{id: 112, question: 'Yes, Renegotiate with the Seller and start over.', option1: null, option2: null },
+{id: 113, question: 'build a Group Home Business', option1: null, option2: null },
+{id: 114, question: 'No, Wholesale or Partner with a Group Home Business', option1: null, option2: null },
+{id: 115, question: 'Yes', option1: null, option2: null },
+{id: 116, question: 'Yes, do you want to stay involved after you Wholesale the property?', option1: 117, option2: 118 },
+{id: 117, question: 'No, Wholesale it for a larger fee.', option1: null, option2: null },
+{id: 118, question: 'Yes, Wholesale it. Take a smaller upfront fee and a portion of the backend.', option1: null, option2: null },
+{id: 119, question: 'Yes, Novation Agreement', option1: null, option2: null },
+{id: 120, question: 'No, Wholesale a Novation Agreement', option1: null, option2: null },
+{id: 121, question: 'No, I want less management and higher rent.', option1: null, option2: null },
+{id: 122, question: 'is it possible to obtain zoning for group homes', option1: null, option2: null },
+{id: 123, question: 'No, is it an area you would like to own property long term?', option1: 15, option2: 126 },
+{id: 124, question: 'yes, do you want to operate a Group Home Business?', option1: 84, option2: 130 },
+{id: 125, question: 'No, wholesale it.', option1: null, option2: null },
+{id: 126, question: 'Yes, does it need a large renovation', option1: 127, option2: 128 },
+{id: 127, question: 'No, traditional rental.', option1: null, option2: null },
+{id: 128, question: 'Yes, BRRRR Strategy', option1: null, option2: null },
+{id: 129, question: 'Yes, build a Group Home Business', option1: null, option2: null },
+{id: 130, question: 'No, Wholesale or Partner with a Group Home Business', option1: null, option2: null },
+{id: 131, question: 'Yes, start over from Down Payment Required?', option1: null, option2: null }
+					]
+				}
+			}
+		
+			render(){				
+				return (		
+						
+					<div className="container text-center">						
+						<nav className="navbar navbar-default">
+							<div className="container-fluid">
+								<div className="navbar-header">
+									<a className="navbar-brand" href="#"><span className="text-primary">QuestionTree App.</span></a>
+								</div>
+							</div>
+						</nav>	
+						
+						<Question q={this.state.questions} />
+							
+						
+					</div> // container
+				);
+			}		
+		}
+		
+		class Question extends React.Component {
+		
+			constructor(props){
+				super(props);		
+					
+				this.state = {
+					id: 0,
+					question: this.props.q[0].question,
+					option1: this.props.q[0].option1,
+					option2: this.props.q[0].option2
+				};
+				
+				// Event bindings
+				this.startOver = this.startOver.bind(this);
+			}
+			
+			startOver(e){
+				e.preventDefault();
+			
+				this.setState({
+					id: 0,
+					question: this.props.q[0].question,
+					option1: this.props.q[0].option1,
+					option2: this.props.q[0].option2
+				});
+			}
+			
+			updateQuestion(e, qID){			
+				e.preventDefault();
+				
+				this.setState({					
+					id: qID,
+					question: this.props.q[qID].question,
+					option1: this.props.q[qID].option1,
+					option2: this.props.q[qID].option2
+				});
+			}
+			
+			renderOptions(){
+				if(this.state.option1){
+					return (
+						<div>
+						<button type="submit" className="btn btn-default" onClick={(e) => this.updateQuestion(e, this.state.option1)}>{this.props.q[this.state.option1].question}</button>
+						<button type="submit" className="btn btn-default" onClick={(e) => this.updateQuestion(e, this.state.option2)}>{this.props.q[this.state.option2].question}</button>
+						</div>
+					);
+				} else {
+					return(
+						<button type="submit" className="btn btn-default" onClick={this.startOver}>Start Over</button>
+					);
+				}
+			}
+		
+			render(){
+				return(
+					<div className="form-group">
+						<h2>{this.state.question}</h2>
+						{this.renderOptions()}
+					</div>
+				);
+			}
+			
+		} // class
+		
+		// Use React to render DOM
+		ReactDOM.render(
+			<App />,
+			rootElement
+		)
+		
+		
+		
+		
+
+	</script>
+
+</body>
+</html>
